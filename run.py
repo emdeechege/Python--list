@@ -38,11 +38,11 @@ def display_contacts():
     '''
     return Contact.display_contacts()
 
-def copy_email():
-    '''
-    Function to handle behavior to copy email
-    '''
-    return Contact.copy_email()
+# def copy_email():
+#     '''
+#     Function to handle behavior to copy email
+#     '''
+#     return Contact.copy(contact_found.email)
 
 def main():
     print("Hello Welcome to your contact list. What is your name?")
@@ -52,7 +52,7 @@ def main():
     print('\n')
 
     while True:
-                    print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
+                    print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list, rm - delete contact, ce -copy email contact ")
 
                     short_code = input().lower()
 
@@ -108,11 +108,38 @@ def main():
                             else:
                                     print("That contact does not exist")
 
+                    elif short_code == 'rm':
+
+                            print("Enter the number of the contact you want to delete")
+
+                            search_number = input()
+                            if check_existing_contacts(search_number):
+                                    search_contact = find_contact(search_number)
+                                    print(f"Phone number.......{search_contact.phone_number}")
+                                    del_contact(search_contact)
+                            else:
+                                print("That contact does not exist")
+
+                    # elif short_code == 'ce':
+                    #
+                    #         print("Enter the number of the contact whose email you want to search")
+                    #
+                    #         search_number = input()
+                    #         if check_existing_contacts(search_number):
+                    #                 search_contact = find_contact(search_number)
+                    #                 print(f"email is.......{search_contact.email}")
+                    #                 copy_email()
+                    #         else:
+                    #             print("That contact email does not exist")
+
                     elif short_code == "ex":
                             print("Bye .......")
                             break
                     else:
                             print("I really didn't get that. Please use the short codes")
+
+
+
 
 if __name__ == '__main__':
 
