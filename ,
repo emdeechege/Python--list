@@ -1,0 +1,23 @@
+Help on class Contact in module contact:
+
+class CCoonnttaacctt(builtins.object)
+ |  Class that generates new instances of contacts
+ |  
+ |  Methods defined here:
+ |  
+ |  ssaavvee__ccoonnttaacctt(self)
+ |      save_contact method saves contact objects into contact_list
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  ____ddiicctt____
+ |      dictionary for instance variables (if defined)
+ |  
+ |  ____wweeaakkrreeff____
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  ccoonnttaacctt__lliisstt = []
